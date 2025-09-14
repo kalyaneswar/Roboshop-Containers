@@ -14,9 +14,11 @@ EXPOSE 3306
 # Copy the initialization script to the Docker image
 # COPY init.sql /docker-entrypoint-initdb.d/
 # COPY db/* /docker-entrypoint-initdb.d/
-COPY db/schema.sql /docker-entrypoint-initdb.d/ \
-     db/app-user.sql /docker-entrypoint-initdb.d/ \
-     db/master-data.sql /docker-entrypoint-initdb.d/ 
+COPY db/schema.sql db/app-user.sql db/master-data.sql /docker-entrypoint-initdb.d/
+
+# COPY db/schema.sql /docker-entrypoint-initdb.d/ \
+#      db/app-user.sql /docker-entrypoint-initdb.d/ \
+#      db/master-data.sql /docker-entrypoint-initdb.d/ 
 # The script will be executed when the container is started for the first time
 # to set up the database and user as specified in the environment variables.
 # Make sure to create the init.sql file with the necessary SQL commands
