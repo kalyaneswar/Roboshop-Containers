@@ -1,11 +1,11 @@
 # Create redis user and set password
-FROM redis:7.0
+FROM redis:8.0
 # Expose the Redis port
 EXPOSE 6379
 # Copy the redis configuration file to the Docker image
 # COPY redis.conf /usr/local/etc/redis/redis.conf
 # Start Redis server with the specified configuration file
-CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+# CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
 # The configuration file should contain the necessary settings, including the password.
 # Example redis.conf content:
 # requirepass YourStrongPassword
