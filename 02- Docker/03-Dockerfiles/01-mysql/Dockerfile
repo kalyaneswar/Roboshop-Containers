@@ -13,8 +13,8 @@ EXPOSE 3306
 
 # Copy the initialization script to the Docker image
 # COPY init.sql /docker-entrypoint-initdb.d/
-# COPY db/* /docker-entrypoint-initdb.d/
-COPY db/schema.sql db/app-user.sql db/master-data.sql /docker-entrypoint-initdb.d/
+COPY db/* /docker-entrypoint-initdb.d/
+# COPY db/schema.sql db/app-user.sql db/master-data.sql /docker-entrypoint-initdb.d/
 
 # COPY db/schema.sql /docker-entrypoint-initdb.d/ \
 #      db/app-user.sql /docker-entrypoint-initdb.d/ \
