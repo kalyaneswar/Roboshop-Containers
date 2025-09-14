@@ -12,7 +12,7 @@ ENV MYSQL_PASSWORD=RoboShop@1
 EXPOSE 3306
 
 # Copy the initialization script to the Docker image
-COPY init.sql /docker-entrypoint-initdb.d/
+# COPY init.sql /docker-entrypoint-initdb.d/
 COPY db/* /docker-entrypoint-initdb.d/
 # The script will be executed when the container is started for the first time
 # to set up the database and user as specified in the environment variables.
